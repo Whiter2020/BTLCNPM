@@ -1,8 +1,14 @@
 import React from 'react';
+import Thankyou from "../assets/img/ThankYou.jpg";
+
+import Header from "../components/Header/Header";  // Import Header component
 
 function ReportUI() {
   return (
     <div className="min-h-screen font-sans bg-white">
+      {/* Header Section */}
+      <Header />  {/* Add Header here */}
+
       {/* Báo cáo tổng quan */}
       <section className="px-6 py-10 bg-blue-100">
         <h2 className="text-2xl font-semibold">Báo cáo tổng quan</h2>
@@ -39,10 +45,18 @@ function ReportUI() {
         </table>
       </section>
 
-      {/* Biểu đồ doanh thu */}
-      <section className="px-6 py-10 bg-gray-50">
-        <h3 className="text-xl font-semibold mb-4">Biểu đồ doanh thu tháng này</h3>
-        {/* Biểu đồ có thể được hiển thị ở đây */}
+      
+
+      {/* Hình ảnh cảm ơn */}
+      <section className="flex justify-center items-center py-10">
+        <div className="text-center">
+          <img
+            src= {Thankyou}
+            alt="Cảm ơn bạn đã ghé thăm"
+            className="w-64 h-64 object-contain mx-auto"
+          />
+          <h2 className="mt-4 text-2xl font-semibold text-gray-800">Cảm ơn bạn đã ghé thăm!</h2>
+        </div>
       </section>
     </div>
   );
